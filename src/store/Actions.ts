@@ -1,12 +1,13 @@
-import { GETNAME } from './Types';
+import { GETNAME } from '../Constants/Constants';
 
 export interface IGETNAMEACTION {
+  name: string;
   type: GETNAME;
-  [key: string]: any;
 }
 export type ModifyAction = IGETNAMEACTION;
 export const SetName = (name: string): IGETNAMEACTION => {
   return {
-    type: GETNAME
+    type: GETNAME,
+    name
   }
 }

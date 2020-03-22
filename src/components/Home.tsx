@@ -1,23 +1,25 @@
 ﻿import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
-import { SetName } from '../store/Actions';
 import { HomeState } from '../types/AppState';
-import { Dispatch } from 'redux';
 
 export interface IProps {
-  dispatch: Dispatch;
-  Home: HomeState;
+  homeState: HomeState;
   SetName: (name: string) => void;
 };
 
 class Home extends Component<IProps> {
+  onClick() {
+    const { SetName } = this.props;
+    SetName('alex');
+    console.log(this.props);
+  }
   render() {
-    console.log('11', this.props)
-    const { dispatch, Home } = this.props;
+    const { id, name } = this.props.homeState;
     return (
       <div>
-        <Button variant="outlined" color="primary" onClick={() => dispatch(SetName('alex'))}>Hello World</Button>
-        <div>{Home.id}</div>
+        <Button variant="outlined" color="primary" onClick={() => this.onClick()}>Hello World</Button>
+        <div>{name}</div>
+        <div>{id}</div>
       </div>
     );
   }

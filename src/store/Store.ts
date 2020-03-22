@@ -5,12 +5,12 @@ import { SetName } from './Actions';
 
 export const mapStateToProps = (state: AppState) => {
   return {
-    Home: state.Home
+    Home: { ...state.Home }
   }
 }
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
-  SetName: () => dispatch(SetName("alex"))
+  SetName: (name: string) => dispatch(SetName(name))
 })
 
 const store = createStore(reducers);

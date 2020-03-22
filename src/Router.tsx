@@ -1,6 +1,6 @@
 import React, { Component, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-const HomeContainer = React.lazy(() => import('./containers/Home.container'));
+const HomeContainer = React.lazy(() => import('./Containers/Home.Container'));
 
 export default class AppRouter extends Component {
   render() {

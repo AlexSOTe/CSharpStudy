@@ -1,6 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
-import { HomeState } from '../types/AppState';
+import { HomeState } from '../Types/AppState';
 // 当前页面的状态数据结构
 export interface IProps {
   homeState: HomeState;

@@ -1,4 +1,4 @@
-import { AppState } from '../types/AppState';
+import { AppState } from '../Types/AppState';
 
 export const appState: AppState = {
   Home: {

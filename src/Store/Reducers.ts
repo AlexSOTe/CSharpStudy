@@ -1,7 +1,7 @@
 ﻿import { GETNAME } from '../Constants/Constants';
 import { appState } from './State';
 import { ModifyAction } from './Actions';
-import { HomeState } from '../types/AppState';
+import { HomeState } from '../Types/AppState';
 import { combineReducers, } from 'redux';
 /**
  * HomeReducer 用于处理action发送给store的数据

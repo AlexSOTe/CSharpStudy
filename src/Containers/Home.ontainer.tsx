@@ -1,9 +1,9 @@
 /// 页面容器
-import { HomeState } from "../types/AppState";
+import { HomeState } from "../Types/AppState";
 import { Dispatch } from "redux";
-import { SetName } from "../store/Actions";
+import { SetName } from "../Store/Actions";
 import { connect } from "react-redux";
-import Home from "../components/Home";
+import Home from "../Components/Home";
 
 /**
  * mapStateToProps将当前store里的数据以我们的组件需要的形式传递到组件。

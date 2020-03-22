@@ -1,8 +1,8 @@
-import { AppState } from '../Models/AppState';
+import { AppState } from '../types/AppState';
 
 export const appState: AppState = {
   Home: {
     name: '',
-    id: ''
+    id: 0
   }
 }

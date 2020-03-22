@@ -1,1 +1,2 @@
-export const GET_NAME = 'GET_NAME';
+export const GETNAME = 'GETNAME';
+export type GETNAME = typeof GETNAME;

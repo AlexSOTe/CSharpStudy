@@ -1,14 +1,28 @@
-import { Action, combineReducers } from 'redux'
-import { GET_NAME } from './Types';
+import { combineReducers } from 'redux'
+import { GETNAME } from './Types';
 import { appState } from './State';
+import { ModifyAction } from './Actions';
+import { AppState } from '../types/AppState';
 
-function GetName(state = appState, action: Action) {
+function SetName(state: AppState = appState, action: ModifyAction) {
+  let stateTemp;
   switch (action.type) {
-    case GET_NAME: return { ...state };
-    default: return state;
+    case GETNAME:
+      stateTemp = {
+        Home: {
+          id: state.Home.id,
+          name: state.Home.name
+        }
+      };
+      break;
+    default:
+      stateTemp = state;
+      break;
   }
+  console.log(stateTemp);
+  return stateTemp;
 }
 const reducers = combineReducers({
-  GetName,
+  SetName,
 })
 export default reducers;

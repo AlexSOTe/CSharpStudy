@@ -1,9 +1,12 @@
-import { GET_NAME } from './Types';
-let id = 0;
-export function SetName(name: string) {
+import { GETNAME } from './Types';
+
+export interface IGETNAMEACTION {
+  type: GETNAME;
+  [key: string]: any;
+}
+export type ModifyAction = IGETNAMEACTION;
+export const SetName = (name: string): IGETNAMEACTION => {
   return {
-    type: GET_NAME,
-    name,
-    id: id++
+    type: GETNAME
   }
 }

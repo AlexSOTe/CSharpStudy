@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
@@ -8,11 +8,13 @@ import store from './Store/Store'
 
 
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <AppRouter />
-    </React.StrictMode>
-  </Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <AppRouter />
+      </Suspense>
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

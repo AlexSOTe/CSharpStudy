@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import AppRouter from './Router';
-import { createStore } from 'redux';
-import reducers from './store/Reducers';
 import { Provider } from 'react-redux';
+import store from './store/Store'
 
-const store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -16,7 +16,7 @@ const mapStateToProps = (homeState: HomeState): HomeState => ({ ...homeState });
  * mapDispatchToProps利用dispatch函数，创建回调props将actions送到store。
  */
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  SetName: (name: string) => dispatch(SetName(name))
-})
+  SetName: (name: string) => dispatch(SetName(name)),
+});
 // 将数据连接至页面
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
